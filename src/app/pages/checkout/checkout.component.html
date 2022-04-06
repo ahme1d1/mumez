@@ -1,0 +1,37 @@
+<div class="pt-xl pb-xl container">
+  <div class="checkoutSteps">
+    <div class="checkoutSteps-item " [ngClass]="currentstep == 'shippingInformations' ? 'is-active' : '' ">
+      <svg-icon src='assets/icons/location.svg' class="checkoutSteps-item-icon"></svg-icon>
+      <span class="checkoutSteps-item-title fw-medium">Shipping Informations</span>
+    </div>
+    <div class="checkoutSteps-line"></div>
+    <div class="checkoutSteps-item" [ngClass]="currentstep == 'paymentMethod' ? 'is-active' : '' ">
+      <svg-icon src='assets/icons/credit.svg' class="checkoutSteps-item-icon"></svg-icon>
+      <span class="checkoutSteps-item-title fw-medium">Payment Method</span>
+    </div>
+    <div class="checkoutSteps-line"></div>
+    <div class="checkoutSteps-item" [ngClass]="currentstep == 'confirmation' ? 'is-active' : '' ">
+      <svg-icon src='assets/icons/check-circle.svg' class="checkoutSteps-item-icon"></svg-icon>
+      <span class="checkoutSteps-item-title fw-medium">Confirmation</span>
+    </div>
+  </div>
+
+  <div class="pt-lg max-xl mx-auto" *ngIf="currentstep != 'thanks'">
+    <app-shipping-informations *ngIf="currentstep == 'shippingInformations'"></app-shipping-informations>
+    <app-payment-method *ngIf="currentstep == 'paymentMethod'"></app-payment-method>
+    <app-confirmation *ngIf="currentstep == 'confirmation'"></app-confirmation>
+    <app-order-summary></app-order-summary>
+
+
+
+    <div class=" checkout-buttons mt-md">
+      <button class="btn pt-e3 pb-e3 fs-xs btn-outline-dark" (click)="prevStep()">Back</button>
+      <button class="btn pt-e3 pb-e3 fs-xs btn-success" (click)="nextStep()">Next</button>
+    </div>
+  </div>
+
+
+  <div class="pt-md max-xl mx-auto" *ngIf="currentstep == 'thanks'">
+    <app-thanks></app-thanks>
+  </div>
+</div>

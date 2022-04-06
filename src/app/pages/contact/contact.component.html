@@ -1,0 +1,127 @@
+<div class="pt-lg pb-lg">
+  <div class="container">
+    <div class="mb-xs">
+      <ul class="appBreadcrumbs">
+        <li>
+          <a [routerLink]="['/']" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }"
+            title="Home">Home
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/contact']" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }"
+            title="Contact">Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="max-lg">
+      <h1 class="fs-xl">Contact Us
+      </h1>
+      <p class="mb-0">
+        If you’d like to get started on creating something brilliant with us, simply fill out the form below. When it
+        comes to telling us about your project, let us know your idea, where you’re located and the timeline you’re
+        looking at.
+      </p>
+    </div>
+
+
+
+    <div class="mt-lg ">
+      <h3 class="fs-md mb-xs">How can we help you?</h3>
+      <div class="row gx-lg">
+        <div class="col-lg-8">
+          <div class="mb-xs">
+            <div class="form-floating">
+              <select class="form-select" id="iType" aria-label="Floating label select example">
+                <option selected>General Inquiry</option>
+                <option value="1">Orders Issues</option>
+                <option value="2">Delivery Issues</option>
+                <option value="3">Return Order</option>
+                <option value="4">System Issues</option>
+              </select>
+              <label for="iType">Category Of Your Issue
+              </label>
+            </div>
+          </div>
+          <div class="mb-xs">
+            <div class="form-floating">
+              <textarea type="text" class="form-control is-textarea" id="comment"
+                placeholder="name@example.com"></textarea>
+              <label for="comment">Comment/ Question</label>
+            </div>
+          </div>
+          <h6 class="fs-sm mb-xs">Contact info</h6>
+          <div class="mb-xs">
+            <div class="form-floating">
+              <input type="text" class="form-control " id="fname" placeholder="name@example.com">
+              <label for="fname">Full Name</label>
+            </div>
+          </div>
+          <div class="mb-xs">
+            <div class="form-floating">
+              <input type="email" class="form-control" id="Email" placeholder="name@example.com">
+              <label for="Email">Email</label>
+            </div>
+          </div>
+          <div class="mb-xs">
+            <div class="form-floating">
+              <input type="text" class="form-control" id="phone" placeholder="name@example.com">
+              <label for="phone">Phone Number</label>
+            </div>
+          </div>
+          <button class="btn btn-secondary  pt-e2 pb-e2 px-4">Submit Request</button>
+
+        </div>
+        <div class="col-lg-4">
+          <div class="mt-md d-lg-none"></div>
+          <div class="border  border-g-400 rounded p-sm">
+            <h4 class="fs-sm mb-0">Contact Info</h4>
+            <div class="row">
+              <div class="col-md-12 mt-xs">
+                <a class="d-flex align-items-center " href="tel:00201014484564" title="00201014484564" target="_blank">
+                  <svg-icon src='assets/icons/phone.svg' class="is-xxxl text-primary flex-1"></svg-icon>
+                  <span class="ms-e2">
+                    <span class="d-block fw-medium">Call us</span>
+
+                    <span class="fw-semi text-primary">00201014484564</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col-md-12 mt-xs">
+                <a class="d-flex align-items-center " href="mailto:Info@mumez.com" title="Info@mumez.com"
+                  target="_blank">
+                  <svg-icon src='assets/icons/email.svg' class="is-xxxl text-primary flex-1"></svg-icon>
+                  <span class="ms-e2">
+                    <span class="d-block fw-medium">Email</span>
+
+                    <span class="fw-semi text-primary">Info@mumez.com</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col-md-12 mt-xs">
+                <span class="d-block fw-medium fs-xs">Follow us</span>
+                <div class=" d-flex align-items-center ">
+                  <a class="d-inline-block me-e2 fs-md" href="#0" target="_blank" title="facebook">
+                    <svg-icon src="assets/icons/facebook.svg"></svg-icon>
+                  </a>
+                  <a class="d-inline-block me-e2 fs-md" href="#0" target="_blank" title="twitter">
+                    <svg-icon src="assets/icons/twitter.svg"></svg-icon>
+                  </a>
+                  <a class="d-inline-block me-e2 fs-md" href="#0" target="_blank" title="instagram">
+                    <svg-icon src="assets/icons/instagram.svg"></svg-icon>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class=" mt-md">
+            <iframe class="d-block rounded overflow-hidden"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3643721.3494864786!2d28.633919827668727!3d26.893285835170403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14368976c35c36e9%3A0x2c45a00925c4c444!2sEgypt!5e0!3m2!1sen!2seg!4v1643721035567!5m2!1sen!2seg"
+              width="100%" height="100%" style="border:0; min-height:150px" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

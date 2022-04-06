@@ -1,0 +1,182 @@
+<section class="pb-xs pt-xs">
+  <div class="container">
+    <ul class="appBreadcrumbs">
+      <li>
+        <a [routerLink]="['/']" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }"
+          title="Home">Home
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/category']" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }"
+          title="Diapers">Diapers
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/product']" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }"
+          title="Graco FastAction Fold 2.0 Travel System - Henson">
+          Graco FastAction Fold 2.0 Travel System - Henson
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="row gx-5">
+      <div class="col-lg-6">
+        <div class="pb-5 d-lg-none"></div>
+        <product-slider
+          [images]="['assets/images/dummy/1.jpg', 'assets/images/dummy/2.jpg','assets/images/dummy/3.jpg','assets/images/dummy/4.jpg','assets/images/dummy/5.jpg']">
+        </product-slider>
+
+        <div class=" mt-5 ">
+          <h4 class="mb-e3 fs-md">Description:</h4>
+          <p class="mb-0">
+            Includes Graco’s top-rated SnugRide Click Connect 35 Infant Car Seat An easy one-second,
+            one-hand fold offers convenience for busy parents
+          </p>
+        </div>
+
+        <div class="mt-5">
+          <h4 class="mb-e3 fs-md">Features</h4>
+          <p class="mb-1">
+            Includes Graco’s top-rated SnugRide Click Connect 35 Infant Car Seat
+          </p>
+          <p class="mb-1">An easy one-second, one-hand fold offers convenience for busy parents
+          </p>
+          <p class="mb-1">
+            Includes Graco’s top-rated SnugRide Click Connect 35 Infant Car Seat
+          </p>
+          <p class="mb-1">An easy one-second, one-hand fold offers convenience for busy parents
+          </p>
+
+        </div>
+        <div class="mt-5 rounded overflow-hidden">
+          <iframe style="border:0; display:block;" width="100%" height="315"
+            src="https://www.youtube.com/embed/Y7teOqM7bbI" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+
+        <hr class="mt-5">
+        <div class="mt-5">
+
+          <div class="d-flex flex-wrap align-items-center mb-xs">
+            <h4 class="mb-xs me-e1 fs-md">Reviews ( 348 )</h4>
+            <span class="mb-xs">
+              <!-- <app-star-rate rate="3.5"></app-star-rate> -->
+              <span class="ms-2 fs-xs">Avg. 4.6 stars</span>
+            </span>
+          </div>
+
+
+          <div class="">
+            <div class="row product-reviews">
+              <div class="col-lg-12 " *ngFor="let item of [].constructor(2); let i = index">
+                <product-review name="John doe" rate="3.5" image="assets/images/dummy/1.jpg"
+                  description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat">
+                </product-review>
+              </div>
+            </div>
+
+          </div>
+          <div class="text-center mt-xs">
+            <button class="btn btn-outline-dark  fs-xxxs px-4">Load more reviews</button>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="col-xl-5 col-lg-6 order-lg ">
+
+        <div class="  product-sidebar ">
+          <h1 class=" product-title mb-xs">
+            Graco FastAction Fold 2.0 Travel System - Henson
+          </h1>
+
+          <p class="product-price  mb-sm">
+            <span class="product-price-current me-xxs">4500 EGP </span>
+            <span class="product-price-old me-xxs">4800 EGP</span>
+            <span class="product-price-discount ">8% Off</span>
+          </p>
+          <div class="mb-sm d-felx align-items-center">
+            <label class="form-label">Quantity</label>
+            <div class="qtyInput max-100 ">
+              <span class="qtyInput-icon" (click)="updateCartDetail( 'minus')">- </span>
+              {{ qty }}
+              <span class="qtyInput-icon" (click)="updateCartDetail( 'plus')"> +</span>
+            </div>
+          </div>
+
+
+
+
+
+          <div class=" d-flex   align-items-center justify-content-between bg-gray-300 rounded fs-xxxs py-2 px-4 mb-sm">
+            <span>Order Now and get it by July 21</span>
+            <span class="fw-medium">To Egypt</span>
+
+          </div>
+
+          <div class="d-flex">
+            <button class="btn btn-success btn-lg w-100  fs-xs me-md">
+              <svg-icon src='assets/icons/cart-plus.svg' class="is-lg me-e5"></svg-icon>
+              <span>Add to Cart</span>
+            </button>
+            <button class="btn product-wishlist me-xxs">
+              <svg-icon src='assets/icons/heart.svg'></svg-icon>
+            </button>
+            <app-share></app-share>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+
+
+<section class="pt-lg ">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+      <h3 class="fs-lg mb-xs">You May Also Like</h3>
+      <a class="btn  btn-outline-dark mb-xs " [routerLink]="['/']" title="View More">
+        View More
+      </a>
+    </div>
+    <swiper [config]="productsSwiperConfig">
+      <ng-template swiperSlide *ngFor="let item of [].constructor(10) ; let i = 'index+1'">
+        <product-card></product-card>
+      </ng-template>
+    </swiper>
+
+  </div>
+</section>
+
+
+<section class="pt-lg ">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+      <h3 class="fs-lg mb-xs">Customers Also Bought </h3>
+      <a class="btn  btn-outline-dark mb-xs " [routerLink]="['/']" title="View More">
+        View More
+      </a>
+    </div>
+    <swiper [config]="productsSwiperConfig">
+      <ng-template swiperSlide *ngFor="let item of [].constructor(10) ; let i = 'index+1'">
+        <product-card></product-card>
+      </ng-template>
+    </swiper>
+
+  </div>
+</section>
+
+<div class="mt-lg">
+  <app-features></app-features>
+</div>

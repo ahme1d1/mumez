@@ -1,0 +1,42 @@
+<h1 class="mb-md fs-md">Reviews</h1>
+<div class=" ">
+
+  <table class="appTable m-0">
+    <tbody>
+      <tr *ngFor="let item of [].constructor(4); let i = index">
+        <td class="ps-0">
+          <div class="appTable-item">
+            <div class="appTable-item-header me-e3">
+              <app-image ratio="is-4-5"></app-image>
+            </div>
+            <div class="appTable-item-body">
+              <h4 class="fs-xxs fw-semi max-xxs mb-0"><a [routerLink]="['/product']"> Graco FastAction Fold 2.0
+                  Travel
+                  System -
+                  Henson </a>
+              </h4>
+              <app-star-rate rate="3.5"></app-star-rate>
+            </div>
+          </div>
+
+        </td>
+        <td>
+          <span class="max-sm  d-block"> Fit in our space perfect. Colour was awesome, and is actually pretty
+            good
+            for
+            pets - we have two dogs in our studio. Best of all it is deep and comfortable.</span>
+        </td>
+        <td>
+          <div class="d-flex">
+            <button class="btn btn-sm btn-primary me-xxs" (click)="show = true">Edit</button>
+            <button class="btn btn-sm btn-link">Delete</button>
+          </div>
+
+
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<review-modal [show]="show" (hideModal)="show=$event"></review-modal>

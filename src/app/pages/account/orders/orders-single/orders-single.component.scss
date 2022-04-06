@@ -1,0 +1,66 @@
+@import "src/assets/style/global";
+
+.trackingSteps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &-line {
+    flex: 1 1 0%;
+    height: 1px;
+    border-top: 1px dashed $dark;
+    margin: 0 1px;
+    background: none;
+    margin-left: rem(4px);
+    &.is-active {
+      border-color: $secondary;
+    }
+  }
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+    @include media-breakpoint-down(sm) {
+      &-title {
+        max-width: 100px;
+        font-size: rem(10px);
+      }
+    }
+    &-icon {
+      @include rfs(32px, width);
+      @include rfs(32px, height);
+      background: $gray-300;
+      border-radius: 20rem;
+      overflow: hidden;
+      font-size: rem(16px);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 0.3em;
+
+      user-select: none;
+
+      @include media-breakpoint-down(md) {
+        margin: 0 0 0.4em;
+        font-size: rem(12px);
+      }
+    }
+
+    &.is-active {
+      color: $secondary;
+
+      .trackingSteps-item-icon {
+        opacity: 100%;
+      }
+
+      .trackingSteps-item-title {
+        opacity: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,132 @@
+@import "src/assets/style/global";
+.productCard {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  &-header {
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    border-radius: $border-radius;
+    border: 1px solid rgba($dark, 0.08);
+    &-thumb {
+      transition: 0.3s ease-in;
+      display: block;
+    }
+    &-badge {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 4;
+      background: $secondary;
+      padding: rem(2px) rem(8px);
+      margin: rem(8px);
+      color: $white;
+      user-select: none;
+      font-size: rem(11px);
+      border-radius: $border-radius;
+    }
+    &-actions {
+      list-style-type: none;
+      padding: 0;
+      margin: rem(8px);
+      display: flex;
+      flex-direction: column;
+      list-style-type: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 4;
+      > li {
+        transform: scale(0);
+        transition: 0.3s ease-in;
+        opacity: 0;
+        margin-bottom: rem(8px);
+        &:nth-child(1) {
+          transition-delay: 0.1s;
+        }
+        &:nth-child(2) {
+          transition-delay: 0.15s;
+        }
+        &:nth-child(3) {
+          transition-delay: 0.2s;
+        }
+        > * {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: rem(32px);
+          height: rem(32px);
+          font-size: rem(14px);
+          border-radius: 20rem;
+          box-shadow: $box-shadow;
+          background: $white;
+          cursor: pointer;
+          border: 1px solid rgba($primary, 0.1);
+          transition: 0.2s ease-in;
+          @include media-breakpoint-down(sm) {
+            width: rem(24px);
+            height: rem(24px);
+          }
+          &:hover,
+          &.is-active {
+            background: $primary;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  &-title {
+    @include font-size(16px);
+    margin-bottom: 0.5em;
+    transition: 0.25s ease-in-out;
+    font-weight: $font-weight-normal;
+  }
+  &-body {
+    @include padding(16px 0 0);
+  }
+  &-price {
+    font-weight: $font-weight-semi;
+    &-old {
+      text-decoration: line-through;
+      font-size: 0.8em;
+      opacity: 0.4;
+      white-space: nowrap;
+    }
+    &-current {
+    }
+    &-discount {
+      color: $success;
+      font-size: 0.8em;
+      white-space: nowrap;
+    }
+  }
+
+  &-rate {
+    white-space: nowrap;
+    color: $warning;
+    &-num {
+      color: rgba($dark, 0.3);
+    }
+  }
+
+  &:hover {
+    .productCard {
+      &-header {
+        &-thumb {
+          transform: scale(1.05);
+        }
+        &-actions {
+          > li {
+            transform: none;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

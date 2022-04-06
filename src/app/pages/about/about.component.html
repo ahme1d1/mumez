@@ -1,0 +1,66 @@
+<section class="pt-lg">
+  <div class="container">
+    <div class="row gx-lg align-items-center">
+      <div class="col-lg-6">
+        <h1 class="fs-xxl">About us</h1>
+        <p class="fs-xs mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+          been
+          the
+          industry’s
+          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+          make
+          a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s
+        </p>
+      </div>
+      <div class="col-6 order-lg ">
+        <img src="assets/images/about/1.svg" alt="mumez" class="img-fluid">
+        <div class="mb-md d-lg-none"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pt-lg">
+  <div class="container">
+    <div class="row gx-lg align-items-center">
+      <div class="col-6 order-lg ">
+        <img src="assets/images/about/2.svg" alt="mumez" class="img-fluid">
+        <div class="mb-md d-lg-none"></div>
+      </div>
+      <div class="col-lg-6">
+        <h3 class="fs-xl">Why we do what we do</h3>
+        <p class="fs-xs mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+          been
+          the
+          industry’s
+          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+          make
+          a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pt-xxl pb-xxl">
+  <div class="container">
+    <h3 class="fs-xl text-center">Why shop on Mumez?</h3>
+
+    <div class="row">
+
+      <div class="col-lg-4 col-sm-6 text-center mt-md" *ngFor="let item of whyItems">
+        <div class="appIcon mb-xs">
+          <img [src]="item.icon" [alt]="item.title">
+        </div>
+        <h4 class="fs-sm">{{item.title}}</h4>
+        <p class="mb-0">
+          {{item.desc}}
+        </p>
+      </div>
+
+
+    </div>
+  </div>
+</section>

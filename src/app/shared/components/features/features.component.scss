@@ -1,0 +1,17 @@
+@import "src/assets/style/global";
+
+.feature {
+  display: flex;
+  &-icon {
+    width: rem(44px);
+    flex: 0 0 rem(44px);
+    @include media-breakpoint-down(md) {
+      width: rem(40px);
+      flex: 0 0 rem(40px);
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

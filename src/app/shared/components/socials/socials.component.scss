@@ -1,0 +1,13 @@
+@import "src/assets/style/global";
+
+.socials {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 rem(-8px);
+  font-size: rem(24px);
+  > li {
+    padding: 0 rem(8px);
+  }
+}

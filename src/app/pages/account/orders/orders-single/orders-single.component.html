@@ -1,0 +1,106 @@
+<h1 class="mb-md fs-md">Order: TCTLZQ</h1>
+
+<div class="mb-md">
+  <div class="trackingSteps">
+    <div class="trackingSteps-item is-active">
+      <span class="trackingSteps-item-icon">1</span>
+      <span class="trackingSteps-item-title">Order Confirmed</span>
+    </div>
+    <div class="trackingSteps-line"></div>
+    <div class="trackingSteps-item">
+      <span class="trackingSteps-item-icon">2</span>
+      <span class="trackingSteps-item-title">Processing</span>
+    </div>
+    <div class="trackingSteps-line"></div>
+    <div class="trackingSteps-item">
+      <span class="trackingSteps-item-icon">3</span>
+      <span class="trackingSteps-item-title">Out For Delivery</span>
+    </div>
+    <div class="trackingSteps-line"></div>
+    <div class="trackingSteps-item">
+      <span class="trackingSteps-item-icon">4</span>
+      <span class="trackingSteps-item-title">Diliverd</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="border  border-g-400 rounded ">
+  <div class="d-flex justify-content-between p-sm">
+    <span>Order Number <b>#296659</b></span>
+    <span>Placed on <b>Jan 28,2020</b></span>
+  </div>
+  <hr class="m-0">
+  <table class="appTable mb-0">
+    <tbody>
+      <tr *ngFor="let item of [].constructor(4); let i = index">
+        <td>
+          <div class="appTable-item">
+            <div class="appTable-item-header me-e3">
+              <app-image ratio="is-4-5"></app-image>
+            </div>
+            <div class="appTable-item-body">
+              <h4 class="fs-xxs fw-semi max-xxs mb-0"><a [routerLink]="['/product']"> Graco FastAction Fold 2.0
+                  Travel
+                  System -
+                  Henson </a>
+              </h4>
+              <span class="fw-semi  mt-e5 d-block fs-xxxs opacity-75 text-secondary"> 6,415.1 EGP</span>
+            </div>
+          </div>
+        </td>
+        <td>
+          Qty: 3
+        </td>
+        <td class=" fw-medium fs-xs">9234 EGP</td>
+        <td>
+          <button class="btn btn-sm btn-primary  rouded-pill" (click)="show = true">
+            Add Review
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="row">
+  <div class="col-lg-6 mt-col">
+    <div class="border  border-g-400 rounded p-md h-100">
+      <p class="mb-xxs">
+        <span class="fw-bold">Transaction Code:</span>
+        TCTLZQ
+      </p>
+      <p class="mb-xxs">
+        <span class="fw-bold">Transaction Date:</span>
+        Apr 25, 2021
+      </p>
+      <p class="mb-xxs">
+        <span class="fw-bold">Email:</span>
+        support@baianat.com
+      </p>
+      <p class="mb-xxs">
+        <span class="fw-bold">Delivery At:</span>
+        Apr 30,2021
+      </p>
+      <p class="mb-xxs">
+        <span class="fw-bold">Phone:</span>
+        201231231231
+      </p>
+      <p class="mb-0">
+        <span class="fw-bold">Adress:</span>
+        123, Global, Program, Type: WORK
+      </p>
+    </div>
+  </div>
+  <div class="col-lg-6 mt-col">
+    <div class="border  border-g-400 rounded p-md h-100">
+      <p class="mb-xxs"><span class="fw-bold">Payment Method: </span> Cash on Delivery</p>
+      <p class="mb-xxs"><span class="fw-bold">Sub Total:</span> 670.0 EGP</p>
+      <p class="mb-xxs"><span class="fw-bold">Shipping:</span> 141.0 EGP</p>
+      <p class="mb-xxs fs-sm text-success"><span class="fw-bold">Total:</span> 811.0 EGP</p>
+    </div>
+  </div>
+</div>
+
+
+<review-modal [show]="show" (hideModal)="show=$event"></review-modal>

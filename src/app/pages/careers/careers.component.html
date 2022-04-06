@@ -1,0 +1,33 @@
+<div class="pt-lg pb-lg">
+  <div class="container">
+    <h1 class="fs-xl text-center mb-sm">Find Job in Mumez</h1>
+
+
+    <div class="row">
+      <div class="col-lg-6 mb-col" *ngFor="let item of [].constructor(6) ; let i = 'index+1'">
+        <div class="border  border-g-400 rounded p-md h-100">
+          <h4 class="fs-md mb-3">
+            <a [routerLink]="['/careers/single']">
+              AMZL Egypt Facilities Supervisor
+            </a>
+          </h4>
+          <p class="mb-2">Job Description The Facilities Supervisor – Maintenance will have a significant impact on
+            customer
+            experience. The Facilities Supervisor – Maintenance will have the ability to lead other...Maggiori
+            informazioni</p>
+          <p class="opacity-50 fs-xxxs mb-3">September 1, 2019</p>
+
+          <a class="btn btn-secondary px-4" [routerLink]="['/careers/single']">
+            Join Us
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-xs">
+      <p class="mb-3 moreText max-md mx-auto">
+        <span>40 out of 142 Careers</span>
+      </p>
+      <button class="btn btn-outline-primary px-4 pt-e3 pb-e3 fs-xs "> Load More Careers</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+@import "src/assets/style/global";
+.accountNav {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background: $gray-300;
+  position: relative;
+  z-index: 2;
+
+  svg-icon {
+    width: 2em;
+    height: 2em;
+    background: rgba($primary, 0.1);
+    color: $primary;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20rem;
+    transition: 0.25s ease-in-out;
+  }
+  > li {
+    > * {
+      display: block;
+      border-bottom: 0;
+      font-weight: $font-weight-medium;
+      @include font-size(16px);
+      @include padding(16px);
+      transition: 0.25s ease-in-out;
+
+      &:hover,
+      &.is-active {
+        background: $white;
+        color: $primary;
+        svg-icon {
+          // background: $white;
+        }
+      }
+    }
+  }
+}
+
+.account {
+  &-main {
+    @include padding(80px 0);
+  }
+  &-aside {
+    position: relative;
+    height: 100%;
+    z-index: 2;
+    @include padding(80px 0);
+    @include media-breakpoint-up(lg) {
+      min-height: calc(100vh - 400px);
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 100vw;
+      background: $gray-300;
+    }
+  }
+}

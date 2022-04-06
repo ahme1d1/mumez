@@ -1,0 +1,56 @@
+<div>
+  <div class="mb-md  border  border-g-400 rounded p-2">
+    <a [routerLink]="['/auth/login']" routerLinkActive="btn-dark" class="btn fs-sm py-3 w-50" title="Login">
+      Login
+    </a>
+    <a [routerLink]="['/auth/register']" routerLinkActive="btn-dark" class="btn fs-sm py-3 w-50" title="Register">
+      Register
+    </a>
+  </div>
+  <form #form="ngForm">
+    <div class="row">
+
+
+      <div class="mb-xs col-6">
+        <div class="form-floating">
+          <input type="text" class="form-control" id="fname" placeholder="name@example.com">
+          <label for="fname">First name</label>
+        </div>
+      </div>
+      <div class="mb-xs col-6">
+        <div class="form-floating">
+          <input type="text" class="form-control" id="lname" placeholder="name@example.com">
+          <label for="lname">Last name</label>
+        </div>
+      </div>
+    </div>
+    <div class="mb-xs">
+      <div class="form-floating">
+        <input type="email" class="form-control" id="Email" placeholder="name@example.com">
+        <label for="Email">Email</label>
+      </div>
+    </div>
+    <div class="mb-xs">
+      <div class="form-floating">
+        <input type="password" class="form-control" id="Password" placeholder="name@example.com">
+        <label for="Password">Password</label>
+      </div>
+    </div>
+
+
+  </form>
+  <div class="d-flex align-items-center justify-content-between mt-xs">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="remember">
+      <label class="form-check-label" for="remember">
+        I agree to the Terms and conditions
+      </label>
+    </div>
+  </div>
+  <button class="btn btn-primary fs-sm py-3 w-100 mt-md">
+    <span>Register</span>
+  </button>
+  <div class="mt-md">
+    <app-social-login></app-social-login>
+  </div>
+</div>

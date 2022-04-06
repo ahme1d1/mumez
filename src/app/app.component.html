@@ -1,0 +1,11 @@
+<div class="theApp">
+  <app-header *ngIf="showHeader"></app-header>
+  <div class="theApp-main">
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer *ngIf="showFooter"></app-footer>
+
+  <app-cart-sidebar></app-cart-sidebar>
+  <app-mobile-nav *ngIf="showHeader"></app-mobile-nav>
+
+</div>

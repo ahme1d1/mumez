@@ -1,0 +1,32 @@
+<div class="d-flex flex-wrap align-items-center justify-content-between">
+  <h1 class="mb-md fs-md">Saved address 4/1 </h1>
+
+  <button class="btn btn-outline-primary mb-md" (click)="show = true">Add New Address</button>
+</div>
+
+<div class=" ">
+  <table class="appTable m-0">
+    <tbody>
+      <tr *ngFor="let item of [].constructor(4); let i = index">
+        <td class="ps-0">
+          <p class="fw-bold fs-xs mb-1">Egypt</p>
+          <p class="mb-0 fs-xxxs">Egypt, Cairo, Central 25 - Building 10 </p>
+
+
+        </td>
+
+        <td></td>
+        <td>
+          <div class="d-flex">
+            <button class="btn btn-sm btn-primary me-xxs" (click)="show = true">Edit</button>
+            <button class="btn btn-sm btn-link">Delete</button>
+          </div>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+
+<address-modal [show]="show" (hideModal)="show=$event"></address-modal>

@@ -1,0 +1,9 @@
+@import "src/assets/style/global";
+
+a.bg-light-primary.is-active {
+  background: $primary;
+  color: $white;
+  &:hover {
+    color: $white;
+  }
+}

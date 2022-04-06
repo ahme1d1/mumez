@@ -1,0 +1,145 @@
+<section class="pt-lg">
+  <div class="container">
+    <div class="text-center">
+      <h1 class="fs-lg text-center mb-xxs">Want to Sell Your Items on Mumez?</h1>
+      <p class="max-md mx-auto ">
+        Start selling where millions of customers are shopping every day.
+        You’re just a few steps away from becoming a seller on Mumez
+      </p>
+    </div>
+  </div>
+</section>
+<section class="pt-lg">
+  <div class="container">
+    <div class="text-center">
+      <h1 class="fs-lg text-center mb-xxs">Why sell on Mumez?</h1>
+
+    </div>
+    <div class="row">
+
+      <div class="col-lg-6 mt-col">
+        <div class="border  border-g-400 rounded p-md h-100">
+          <h4 class="fs-md mb-2">
+            Reach millions of customers
+          </h4>
+          <p class="mb-0 fs-xs">
+            More customers will find your products, which means more sales, right?
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-6 mt-col">
+        <div class="border  border-g-400 rounded p-md h-100">
+          <h4 class="fs-md mb-2">
+            Local customer and marketing support
+
+          </h4>
+          <p class="mb-0 fs-xs">
+            Our professional customer support and business development teams will support you to become more successful.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-6 mt-col">
+        <div class="border  border-g-400 rounded p-md h-100">
+          <h4 class="fs-md mb-2">
+            Easy and free listing
+          </h4>
+          <p class="mb-0 fs-xs">
+            Create your seller account and list all your products in few steps and absolutely for free.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-6 mt-col">
+        <div class="border  border-g-400 rounded p-md h-100">
+          <h4 class="fs-md mb-2">
+            Payment & Shipping handled by Mumez
+          </h4>
+          <p class="mb-0 fs-xs">
+            Let us handle all this hassle for you. We will pick up your products, deliver them to your customers, and
+            eventually send you the money, as easy as it sounds.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="pt-lg">
+  <div class="container">
+    <div class="text-center">
+      <h1 class="fs-lg text-center mb-xxs">How selling works?</h1>
+    </div>
+
+    <div class="row justify-content-center">
+
+      <div class="col-lg-4 col-sm-6 text-center mt-md" *ngFor="let item of howItems">
+        <div class="appIcon mb-xs">
+          <img [src]="item.icon" [alt]="item.title">
+        </div>
+        <h4 class="fs-sm">{{item.title}}</h4>
+        <p class="mb-0">
+          {{item.desc}}
+        </p>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<section class="pt-lg pb-lg">
+  <div class="container">
+    <div class="text-center max-lg mx-auto mb-sm">
+      <h1 class="fs-lg text-center mb-xxs">Sell on Mumez</h1>
+      <p class="mb-0 fs-xxxs">Mumez searches high and low for the best brands and products around the world to offer our
+        valued
+        customers the widest range of wow products, best sellers, award winners and niche finds. If you have a brand or
+        are a brand that fits this please reach out to us – we would love to learn more and get you on board.
+      </p>
+    </div>
+    <div class="max-lg mx-auto">
+      <form action="">
+
+        <div class="mb-xs">
+          <div class="form-floating">
+            <input type="text" class="form-control " id="fname" placeholder="name@example.com">
+            <label for="fname">Full Name</label>
+          </div>
+        </div>
+
+        <div class="mb-xs">
+          <div class="form-floating">
+            <input type="text" class="form-control " id="bType" placeholder="name@example.com">
+            <label for="bType">Business type</label>
+          </div>
+        </div>
+        <div class="mb-xs">
+          <div class="form-floating">
+            <input type="email" class="form-control" id="Email" placeholder="name@example.com">
+            <label for="Email">Email</label>
+          </div>
+        </div>
+        <div class="mb-xs">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="phone" placeholder="name@example.com">
+            <label for="phone">Phone Number</label>
+          </div>
+        </div>
+
+        <div class="mb-xs">
+          <div class="form-floating">
+            <textarea type="text" class="form-control is-textarea" id="Message"
+              placeholder="name@example.com"></textarea>
+            <label for="Message">Message</label>
+          </div>
+        </div>
+        <button class="btn btn-secondary pt-e2 pb-e2 px-4">Submit Request</button>
+
+      </form>
+    </div>
+  </div>
+</section>

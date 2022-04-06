@@ -1,0 +1,61 @@
+<div class="filter" [class.is-active]="overlay">
+  <div class="filter-trigger">
+    <button class="btn btn-outline-dark  pt-2 pb-2 w-100 mb-md d-lg-none" (click)="overlay = true">
+      <svg-icon src='assets/icons/filter.svg' class="is-lg me-e5"></svg-icon>
+
+      <span>Filter Results </span>
+    </button>
+  </div>
+  <div class="filter-overlay">
+    <div class="filter-bg" (click)="overlay = false"></div>
+    <div class="filter-container">
+      <div class="filter-header">
+        <h4 class="fs-sm mb-0">Filter By</h4>
+        <button class="btn btn-link text-secondary p-0 fs-xs shadow-none">Reset</button>
+      </div>
+      <div class="filter-item" *ngFor="let item of dummyData ; let i = 'index+1'">
+        <input type="checkbox" class="filter-item-input" checked>
+        <div class="filter-item-header">
+          <h5 class="fs-xs mb-0">{{item.title}} </h5>
+          <span class="filter-item-header-icon  ">
+            <svg-icon src='assets/icons/plus-circle.svg'></svg-icon>
+            <svg-icon src='assets/icons/minus-circle.svg'></svg-icon>
+          </span>
+        </div>
+        <div class="filter-item-body">
+
+          <div class="form-check" *ngFor="let val of item.items ; let i = 'index+1'">
+            <input class="form-check-input" type="checkbox" [value]="val" [id]="val">
+            <label class="form-check-label" [for]="val">
+              {{val}}
+            </label>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="filter-item">
+        <input type="checkbox" class="filter-item-input" checked>
+        <div class="filter-item-header">
+          <h5 class="fs-xs mb-0">Price </h5>
+          <span class="filter-item-header-icon  ">
+            <svg-icon src='assets/icons/plus-circle.svg'></svg-icon>
+            <svg-icon src='assets/icons/minus-circle.svg'></svg-icon>
+          </span>
+        </div>
+        <div class="filter-item-body">
+          <ngx-slider [(value)]="PriceValue" [(highValue)]="highValue" [options]="options"
+            (userChangeEnd)="price($event)"></ngx-slider>
+        </div>
+      </div>
+
+      <div class="filter-footer d-lg-none">
+        <button class="btn w-100 btn-success pt-2 pb-2">
+          Apply
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>

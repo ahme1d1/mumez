@@ -1,0 +1,40 @@
+$fontsPath: "/assets/fonts/somar-rounded/";
+
+@font-face {
+  font-family: "Somar Rounded";
+  src: local("Somar Rounded Bold"), local("SomarRounded-Bold"),
+    url("#{$fontsPath}SomarRounded-Bold.woff2") format("woff2"),
+    url("#{$fontsPath}SomarRounded-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Somar Rounded";
+  src: local("Somar Rounded SemiBold"), local("SomarRounded-SemiBold"),
+    url("#{$fontsPath}SomarRounded-SemiBold.woff2") format("woff2"),
+    url("#{$fontsPath}SomarRounded-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Somar Rounded";
+  src: local("Somar Rounded Medium"), local("SomarRounded-Medium"),
+    url("#{$fontsPath}SomarRounded-Medium.woff2") format("woff2"),
+    url("#{$fontsPath}SomarRounded-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Somar Rounded";
+  src: local("Somar Rounded Regular"), local("Somar"),
+    url("#{$fontsPath}SomarRounded-Regular.woff2") format("woff2"),
+    url("#{$fontsPath}SomarRounded-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

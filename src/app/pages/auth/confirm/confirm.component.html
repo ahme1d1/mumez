@@ -1,0 +1,102 @@
+<div>
+  <div class="mb-md  text-center">
+    <h1 class="fs-xl">Confirm</h1>
+    <p class="fs-sm mb-0">Enter confirmation code</p>
+
+  </div>
+  <form #form="ngForm">
+
+    <div class="row">
+      <div class="col-3">
+        <input type="text" class="form-control form-control-number text-center" min="1" max="9" maxlength="1"
+          pattern="\d*">
+      </div>
+      <div class="col-3">
+        <input type="text" class="form-control form-control-number text-center" min="1" max="9" maxlength="1"
+          pattern="\d*">
+      </div>
+      <div class="col-3">
+        <input type="text" class="form-control form-control-number text-center" min="1" max="9" maxlength="1"
+          pattern="\d*">
+      </div>
+      <div class="col-3">
+        <input type="text" class="form-control form-control-number text-center" min="1" max="9" maxlength="1"
+          pattern="\d*">
+      </div>
+    </div>
+    <div class="text-center mt-md">
+      <span>Haven’t received the code yet ?</span>
+      <button class="btn btn-sm">Resend </button>
+
+    </div>
+
+
+  </form>
+
+  <button class="btn btn-primary fs-sm py-3 w-100 mt-md">
+    <span>Confirm</span>
+  </button>
+
+</div>
+
+
+
+<div class="authPage d-none">
+  <div class="authPage-header">
+    <a class="authPage-header-logo" [routerLink]="['/']">
+      <img src="assets/icons/logo.svg" alt="Mumez">
+    </a>
+
+  </div>
+  <div class="authPage-aside">
+    <div class="text-center max-md">
+      <img src="assets/images/3.svg" alt="" class="img-fluid">
+      <h2 class="fs-lg mt-md mb-xs">Confirm Phone number</h2>
+      <p class="fs-sm">A code has been sent to your phone number at 232****** </p>
+      <p class="fs-sm">If you have not received the code yet, please press the “Resend” button again</p>
+    </div>
+    <!-- <ul class="authPage-aside-footer">
+      <li><a [routerLink]="['/privacy']" title="Privacy">Privacy</a></li>
+      <li><a [routerLink]="['/terms']" title="Terms of Use">Terms of Use</a></li>
+      <li><a [routerLink]="['/faq']" title="FAQs">FAQs</a></li>
+    </ul> -->
+  </div>
+  <div class="authPage-main">
+    <div class="max-lg w-100">
+      <div class="mb-lg">
+        <h1 class="fs-xl">Confirm</h1>
+        <p class="fs-md mb-0">Enter confirmation code</p>
+      </div>
+
+      <div class="row">
+        <div class="col-3">
+          <input type="text" class="form-control form-control-number text-center" min="1" max="9" maxlength="1"
+            pattern="\d*">
+        </div>
+        <div class="col-3">
+          <input type="text" class="form-control form-control-number text-center" min="1" max="9" maxlength="1"
+            pattern="\d*">
+        </div>
+        <div class="col-3">
+          <input type="text" class="form-control form-control-number text-center" min="1" max="9" maxlength="1"
+            pattern="\d*">
+        </div>
+        <div class="col-3">
+          <input type="text" class="form-control form-control-number text-center" min="1" max="9" maxlength="1"
+            pattern="\d*">
+        </div>
+      </div>
+      <div class="text-center mt-md">
+        <span>Haven’t received the code yet ?</span>
+        <button class="btn btn-sm">Resend </button>
+
+      </div>
+
+
+      <button class="btn btn-primary mt-md w-100">
+        <span>Confirm</span>
+      </button>
+    </div>
+  </div>
+
+</div>

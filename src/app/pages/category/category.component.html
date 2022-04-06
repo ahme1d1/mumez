@@ -1,0 +1,206 @@
+<section class="pb-xs pt-xs">
+  <div class="container">
+    <ul class="appBreadcrumbs">
+      <li>
+        <a [routerLink]="['/']" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }"
+          title="Home">Home
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/category']" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }"
+          title="Diapers">Diapers
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h1 class="fs-xl mb-xs">Diapers</h1>
+    <swiper [config]="swiperFullConfig">
+      <ng-template swiperSlide *ngFor="let item of [].constructor(3) ; let i = 'index+1'">
+        <a [routerLink]="['/']" title="abc">
+          <app-image src="assets/images/b/1.png" ratio="is-4-1 rounded"></app-image>
+        </a>
+      </ng-template>
+    </swiper>
+  </div>
+</section>
+
+<section class="pt-md">
+  <div class="container">
+    <swiper [config]="swiperAutoConfig" class="autoWidthSwiper">
+      <ng-template swiperSlide *ngFor="let category of dummyCategories ; let i = 'index+1'">
+        <a [routerLink]="['/']"
+          class=" bg-light-primary rounded-3 p-xs ps-sm pe-sm d-inline-flex align-items-center  h-100 justify-content-center">
+          <span class="fw-bold fs-xs text-nowrap">{{category.title}}</span>
+        </a>
+      </ng-template>
+    </swiper>
+  </div>
+</section>
+<section class="pt-lg ">
+  <div class="container">
+    <div class="text-center">
+      <h3 class="fs-lg mb-xs">Shop by brands </h3>
+    </div>
+    <div class="scrollSection">
+      <div class="scrollSection-container">
+        <div class="row g-2  justify-content-center">
+          <div class="col  appLogo-col" *ngFor="let item of [].constructor(21) ; let i = 'index+1'">
+            <a [routerLink]="['/']" class="bg-gray-300 rounded-3 p-xs d-flex align-items-center justify-contnet-center">
+              <div class="appLogo ">
+                <img [src]="'assets/images/logos/'+ i +'.png'" alt="">
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pt-lg ">
+  <div class="container">
+    <div class="text-center">
+      <h3 class="fs-lg mb-xs">Shop by age </h3>
+    </div>
+    <div class="scrollSection">
+      <div class="scrollSection-container">
+
+        <div class="row">
+          <div class="col-3" *ngFor="let item of [].constructor(4) ; let i = 'index+1'">
+            <app-age-card></app-age-card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pt-lg pb-lg mt-lg  bg-gray-300">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+      <h3 class="fs-lg mb-xs">Featured Products </h3>
+      <a class="btn  btn-outline-dark mb-xs " [routerLink]="['/']" title="View More">
+        View More
+      </a>
+    </div>
+    <swiper [config]="productsSwiperConfig">
+      <ng-template swiperSlide *ngFor="let item of [].constructor(10) ; let i = 'index+1'">
+        <product-card></product-card>
+      </ng-template>
+    </swiper>
+  </div>
+</section>
+
+<section class="pt-lg  ">
+  <div class="container">
+    <h3 class="fs-lg mb-xxs">All Products </h3>
+    <div class="d-flex justify-content-between mb-xs d-none d-lg-flex">
+      <div class="d-flex">
+        <div class="appDropdown me-e1">
+          <button class="form-select appDropdown-trigger mb-0 fw-semi">Price</button>
+          <div class="appDropdown-main">
+            <ngx-slider [(value)]="PriceValue" [(highValue)]="highValue" [options]="options"
+              (userChangeEnd)="price($event)"></ngx-slider>
+          </div>
+        </div>
+        <div class="appDropdown  me-e1">
+          <button class="form-select appDropdown-trigger mb-0 fw-semi">Category</button>
+          <div class="appDropdown-main">
+            <div class="form-check mb-e4" *ngFor="let category of dummyCategories ; let i = 'index+1'">
+              <input class="form-check-input" type="checkbox" [id]="category.title">
+              <label class="form-check-label" [for]="category.title">
+                {{category.title}}
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="appDropdown me-e1">
+          <button class="form-select appDropdown-trigger mb-0 fw-semi">Age</button>
+          <div class="appDropdown-main">
+            <div class="form-check  mb-e4" *ngFor="let item of dummyAges ; let i = 'index+1'">
+              <input class="form-check-input" type="checkbox" value="" [id]="item">
+              <label class="form-check-label" [for]="item">
+                {{item}}
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="appDropdown me-e1">
+          <button class="form-select appDropdown-trigger mb-0 fw-semi">Brand</button>
+          <div class="appDropdown-main">
+            <div class="form-check  mb-e4" *ngFor="let item of dummyBrands ; let i = 'index+1'">
+              <input class="form-check-input" type="checkbox" value="" [id]="item">
+              <label class="form-check-label" [for]="item">
+                {{item}}
+              </label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="d-flex align-items-center">
+        <span class="fw-normal me-e4  text-nowrap">Sort by </span>
+        <select class="form-select">
+          <option [value]="item" *ngFor="let item of dummySort ; let i = 'index+1'">{{item}}</option>
+        </select>
+
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-xxl-2 col-lg-3 col-md-4 col-6 mb-col" *ngFor="let item of [].constructor(12) ; let i = 'index+1'">
+        <product-card></product-card>
+      </div>
+    </div>
+    <div class="text-center mt-xs">
+      <p class="mb-3 moreText max-md mx-auto">
+        <span>40 out of 142 Products</span>
+      </p>
+      <button class="btn btn-outline-primary px-4 pt-e2 pb-e2 fs-xs "> Load More Products</button>
+    </div>
+  </div>
+</section>
+<section class="pt-lg  scrollSection">
+  <div class="scrollSection-container">
+    <div class="container ">
+      <div class="row">
+        <div class="col-4">
+          <a [routerLink]="['/']" title="abc">
+            <app-image src="assets/images/b/6.png" ratio="is-5-3 rounded"></app-image>
+          </a>
+        </div>
+        <div class="col-4">
+          <a [routerLink]="['/']" title="abc">
+            <app-image src="assets/images/b/7.png" ratio="is-5-3 rounded"></app-image>
+          </a>
+        </div>
+        <div class="col-4">
+          <a [routerLink]="['/']" title="abc">
+            <app-image src="assets/images/b/8.png" ratio="is-5-3 rounded"></app-image>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pt-lg pb-lg mt-lg  bg-gray-300">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+      <h3 class="fs-lg mb-xs">New Arrivals </h3>
+      <a class="btn  btn-outline-dark mb-xs " [routerLink]="['/']" title="View More">
+        View More
+      </a>
+    </div>
+    <swiper [config]="productsSwiperConfig">
+      <ng-template swiperSlide *ngFor="let item of [].constructor(10) ; let i = 'index+1'">
+        <product-card></product-card>
+      </ng-template>
+    </swiper>
+  </div>
+</section>

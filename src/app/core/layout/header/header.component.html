@@ -1,0 +1,263 @@
+<div class="theHeader">
+  <div class="theHeader-start ">
+    <div class="container theHeader-start-container position-relative ">
+      <ul class="theHeader-start-nav">
+        <li>
+          <a [routerLink]="['/contact']" title="Customer Support">
+            <svg-icon src="assets/icons/support.svg" class="is-lg"></svg-icon>
+            <span class="ms-e5">Customer Support</span>
+          </a>
+        </li>
+        <li class="d-none d-sm-block">
+          <a [routerLink]="['/blog']" title="Blog">
+            <svg-icon src="assets/icons/post.svg" class="is-lg"></svg-icon>
+            <span class="ms-e5">Blog</span>
+          </a>
+        </li>
+
+        <li class="d-none d-sm-block">
+          <a [routerLink]="['/sell']" title="Sell with us">
+            <svg-icon src="assets/icons/usd.svg" class="is-lg"></svg-icon>
+            <span class="ms-e5">Sell with us</span>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="theHeader-start-nav">
+        <li>
+          <a [routerLink]="['/']" title="EGP">
+            <svg-icon src="assets/icons/usd.svg" class="is-lg"></svg-icon>
+            <span class="ms-e5">EGP</span>
+          </a>
+        </li>
+        <li style="font-family: arial;">|</li>
+
+        <li>
+          <a [routerLink]="['/']" title="عربي">
+            <svg-icon src="assets/icons/web.svg" class="is-lg"></svg-icon>
+            <span class="ms-e5">عربي</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="theHeader-center ">
+    <div class="container">
+      <a class="theHeader-logo" [routerLink]="['/']" title="mumez">
+        <img src="assets/icons/logo.svg" alt="mumez">
+      </a>
+      <div class="theHeader-search">
+        <input class="form-control" type="text" placeholder="What can we help to find?">
+        <button class="btn btn-primary  fw-semi">
+          <svg-icon src='assets/icons/search.svg' class="is-lg"></svg-icon>
+          <span class="ms-e4 d-none d-sm-inline-block">Search</span>
+        </button>
+        <ul class="theHeader-search-results">
+          <li *ngFor="let item of [].constructor(20); let i = index">
+            <a [routerLink]="['/terms']">
+              <span class=" fw-semi">Pampers</span>
+              Pants Size 5 in
+              <span class="text-primary fw-semi">
+                Diaper Bags
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <ul class="theHeader-nav">
+        <li class="d-none d-lg-flex">
+          <a [routerLink]="['/account/addresses']" title="Diliver to" class="fs-xxxs">
+            <svg-icon src="assets/icons/location.svg" class="is-xl"></svg-icon>
+            <span class="ms-e5 fw-normal ">Diliver to</span>
+            <span class="ms-e5">Damietta</span>
+            <svg-icon src="assets/icons/menu-down.svg" class="is-xl"></svg-icon>
+          </a>
+        </li>
+        <li class="d-none d-lg-flex">
+          <a [routerLink]="['/auth/login']" title="Login">
+            <svg-icon src="assets/icons/person.svg" class="is-xl"></svg-icon>
+            <span class="ms-e5">Sign in</span>
+          </a>
+        </li>
+        <li class="d-none d-lg-flex ">
+          <a [routerLink]="['/wishlist']" title="wishlist" class="text-secondary">
+            <svg-icon src="assets/icons/heart.svg" class="is-xl"></svg-icon>
+            <span class="theHeader-nav-num">5</span>
+          </a>
+        </li>
+
+        <li class="d-none d-lg-flex">
+          <a href="javascript:void(0)" title="Cart" (click)="CartSidebarService.Open()" class="text-primary">
+            <svg-icon src="assets/icons/cart.svg" class="is-xl"></svg-icon>
+            <span class="theHeader-nav-num">2</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="theHeader-end  position-relative">
+    <div class="container  ">
+      <div class="theHeader-end-container">
+
+
+        <ul class="theHeader-nav">
+          <li class="megaMenu-parent " [class.is-active]="activeMenu == 'all'" (mouseenter)="categoryEnter('all')"
+            (mouseleave)="categoryLeave('all')">
+            <a [routerLink]="['/all-categorises']" title="All Categorises " class="fw-bold">
+              <span class="me-e6">All Categorises</span>
+              <svg-icon src='assets/icons/menu-down.svg' class=" is-xl"></svg-icon>
+            </a>
+
+            <div class="megaMenu " *ngIf="activeMenu == 'all'" @ifAnimation>
+              <div class="container">
+                <div class="row">
+                  <div class="col-2">
+                    <ul class="megaMenu-categories  h-100">
+                      <li *ngFor="let category of categories | slice:0:10; let i=index">
+                        <a (click)="activeMenuClose()" [routerLink]="['/category']" [title]="category.title"
+                          [class.is-active]="activeCategory == category.title"
+                          (mouseenter)="changeCategory(category.title)">
+                          {{category.title}}
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-10">
+                    <div class="  pt-xs pb-xs">
+
+                      <div class="row pt-xxxs">
+                        <div class="col-2">
+                          <h5 class="opacity-50 fs-xxxs mb-xxxs">Most Popular</h5>
+                          <div *ngFor="let category of categories | slice:0:10; let i=index">
+                            <div *ngIf="activeCategory == category.title">
+                              <ul class="megaMenu-nav">
+                                <li *ngFor="let item of categories | slice:0:9; let i = index">
+                                  <a (click)="activeMenuClose()" [routerLink]="['/category']" [title]="item.title">
+                                    {{item.title}}</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-5">
+                          <h5 class="opacity-50 fs-xxxs mb-xxxs">Top Brands</h5>
+                          <div class="row g-1">
+                            <div class="col-4" *ngFor="let item of [].constructor(9) ; let i = 'index+1'">
+                              <a (click)="activeMenuClose()" [routerLink]="['/']"
+                                class="bg-gray-300 rounded-3 p-xs d-flex align-items-center justify-contnet-center">
+                                <div class="appLogo">
+                                  <img [src]="'assets/images/logos/'+ i +'.png'" alt="">
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-4">
+                          <a (click)="activeMenuClose()" [routerLink]="['/']" class="d-block">
+                            <app-image src="assets/images/b/3.png" ratio="is-5-3 rounded"></app-image>
+                          </a>
+                          <a (click)="activeMenuClose()" [routerLink]="['/']"
+                            class="btn btn-outline-primary w-100 py-2 mt-xxs" title="Shop All Deals">
+                            <span class="me-e6">Shop All Deals</span>
+                            <span class="circleIcon">
+                              <svg-icon src='assets/icons/arrow-more.svg' class="is-xl "></svg-icon>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+
+
+
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </li>
+          <li class="theHeader-nav-spacer"></li>
+
+          <li class="megaMenu-parent " *ngFor="let category of categories" (mouseenter)="categoryEnter(category.title)"
+            (mouseleave)="categoryLeave(category.title)" [class.is-active]="activeMenu == category.title">
+            <a [routerLink]="['/category']" [title]="category.title"> {{category.title}}</a>
+            <div class="megaMenu " *ngIf="activeMenu == category.title" @ifAnimation>
+              <div class="container pt-xs pb-xs">
+                <h5 class="fs-sm mb-xs d-flex align-items-center">
+                  <img class="h-auto max-40" [src]="category.icon" alt="">
+                  <span class="ms-e3"> {{category.title}}</span>
+                </h5>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="row">
+                      <div class="col-4 mb-col" *ngFor="let item of [].constructor(5) ; let i = 'index+1'">
+                        <h6 class="fs-xxs"><a [routerLink]="['/']" (click)="activeMenuClose()">Potty Training</a></h6>
+                        <a class="mt-1 fs-xxxs d-block" [routerLink]="['/']" (click)="activeMenuClose()">Portable
+                          potties </a>
+                        <a class="mt-1 fs-xxxs d-block" [routerLink]="['/']" (click)="activeMenuClose()">Step stools
+                        </a>
+                        <a class="mt-1 fs-xxxs d-block" [routerLink]="['/']" (click)="activeMenuClose()">Diaper Rash
+                          Creams </a>
+                      </div>
+                    </div>
+                    <a [routerLink]="['/']" title="Shop All Diapers" class="text-secondary fw-bold">
+                      <span class="me-e6">Shop All Diapers</span>
+                      <span class="circleIcon">
+                        <svg-icon src='assets/icons/arrow-more.svg' class="is-xl"></svg-icon>
+                      </span>
+
+                    </a>
+                  </div>
+                  <div class="col-3">
+                    <div class="row g-1">
+                      <div class="col-4" *ngFor="let item of [].constructor(9) ; let i = 'index+1'">
+                        <a (click)="activeMenuClose()" [routerLink]="['/']"
+                          class="bg-gray-300 rounded-3 p-xs d-flex align-items-center justify-contnet-center">
+                          <div class="appLogo">
+                            <img [src]="'assets/images/logos/'+ i +'.png'" alt="">
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="col-3">
+                    <a (click)="activeMenuClose()" [routerLink]="['/']" class="d-block">
+                      <app-image src="assets/images/b/3.png" ratio="is-5-3 rounded"></app-image>
+                    </a>
+                    <a (click)="activeMenuClose()" [routerLink]="['/']"
+                      class="btn btn-outline-primary w-100 py-2 mt-xxs" title="Shop All Deals">
+                      <span class="me-e6">Shop All Deals</span>
+                      <span class="circleIcon">
+                        <svg-icon src='assets/icons/arrow-more.svg' class="is-xl "></svg-icon>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </li>
+
+
+          <li class="text-secondary">
+            <a [routerLink]="['/sale']" title="Sale">
+              <svg-icon src='assets/icons/sale.svg' class="is-md me-e5"></svg-icon>
+              <span>Sale</span>
+
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="megaMenu-bg " *ngIf="activeMenu" @ifAnimation>
+
+
+  </div>
+</div>

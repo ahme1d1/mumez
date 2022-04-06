@@ -1,0 +1,136 @@
+@import "src/assets/style/global";
+
+.cartSidebar {
+  position: fixed;
+  z-index: $zindex-modal;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  &-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($dark, 0.8);
+    cursor: pointer;
+  }
+  &-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    max-width: rem(500px);
+    width: 100%;
+    background: $white;
+    @include padding-top(60px);
+    @include scrollBar;
+    padding-bottom: rem(160px);
+
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  &-progress {
+    background: $gray-300;
+    border-radius: 20rem;
+    height: rem(4px);
+    position: relative;
+    overflow: hidden;
+    &-inner {
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: $warning;
+    }
+  }
+  &-item {
+    display: flex;
+    align-items: center;
+    @include padding(20px 0);
+    @include margin(0 40px);
+    &-header {
+      width: rem(60px);
+      flex: 0 0 rem(60px);
+      display: block;
+    }
+    &-body {
+      width: 100%;
+      padding: 0 rem(10px);
+      flex: 1 1 0%;
+    }
+    &-footer {
+      width: rem(60px);
+      flex: 0 0 rem(60px);
+      text-align: right;
+      .form-select {
+        padding-right: 2rem;
+      }
+    }
+    &:not(:last-child) {
+      border-bottom: 1px solid $gray-200;
+    }
+    &-button {
+      width: rem(40px);
+      height: rem(40px);
+      border-radius: 20rem;
+      background: $primary;
+      color: $white;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.25s ease-in;
+      cursor: pointer;
+      font-size: rem(18px);
+      &:hover,
+      &.is-active {
+        background: darken($primary, 10%);
+        color: $white;
+      }
+    }
+  }
+  &-close {
+    display: inline-flex;
+    @include font-size(20px);
+    width: 2em;
+    height: 2em;
+    border-radius: 20rem;
+    background: $gray-200;
+
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    &:hover {
+      color: $white;
+      background: $secondary;
+    }
+  }
+  &-footer {
+    position: fixed;
+    bottom: 0;
+
+    right: 0;
+    max-width: rem(500px);
+    width: 100%;
+    background: $gray-300;
+    @include padding(20px 40px);
+    z-index: 2;
+    text-align: center;
+    &-buttons {
+      display: flex;
+      justify-content: space-between;
+      > * {
+        width: 49%;
+      }
+    }
+  }
+}
+
+.cart-qty {
+  padding: 1px 5px;
+}
+.cursor {
+  cursor: pointer;
+}

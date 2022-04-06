@@ -1,0 +1,28 @@
+<ul class="mobileNav">
+  <li>
+    <a [routerLink]="['/all-categorises']">
+      <svg-icon src="assets/icons/shop.svg"></svg-icon>
+      <span>Shop</span>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:void(0)" (click)="CartSidebarService.Open()">
+      <svg-icon src="assets/icons/cart.svg"></svg-icon>
+      <span>Cart</span>
+    </a>
+  </li>
+  <li>
+    <a [routerLink]="['/account/whishlist']">
+      <svg-icon src="assets/icons/heart.svg"></svg-icon>
+      <span>Whishlist</span>
+    </a>
+  </li>
+  <li>
+    <a [routerLink]="['/auth']">
+      <svg-icon src="assets/icons/person.svg"></svg-icon>
+      <span>Account</span>
+    </a>
+  </li>
+</ul>
+
+<div class="mobileNav-spacing"></div>

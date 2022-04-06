@@ -1,0 +1,25 @@
+@import "src/assets/style/global";
+
+.socialLogin {
+  display: flex;
+  justify-content: space-between;
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+  .btn {
+    width: 49%;
+    border-color: $gray-400;
+    padding: 0.8em 0.8em;
+    @include font-size(18px);
+    font-weight: $font-weight-medium;
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      &:first-child {
+        margin-bottom: 0.5em;
+      }
+    }
+    &:hover {
+      background: $gray-300;
+    }
+  }
+}

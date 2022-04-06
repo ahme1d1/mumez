@@ -1,0 +1,252 @@
+a.text-secondary:hover {
+  color: $primary !important;
+}
+.btn-primary,
+.btn-success,
+.btn-secondary {
+  color: $white;
+  &:hover,
+  &:focus {
+    color: $white;
+  }
+}
+.container {
+  @include media-breakpoint-down(lg) {
+    max-width: 100%;
+    padding-left: rem(15px);
+    padding-right: rem(15px);
+  }
+}
+.form-control {
+  &.is-textarea {
+    min-height: rem(120px);
+  }
+}
+
+// .btn-warning {
+//   color: $white;
+//   &:hover {
+//     color: $white;
+//   }
+// }
+// .btn-outline-primary,
+// .btn-outline-secondary {
+//   &:hover {
+//     color: $white;
+//   }
+// }
+.btn-white {
+  background: $white;
+  border-color: $white;
+  box-shadow: $box-shadow-btn;
+  &:hover {
+    background: $secondary;
+    border-color: $secondary;
+    color: $dark;
+  }
+  &.active {
+    border-color: $secondary;
+    color: $secondary;
+    &:hover {
+      color: $dark;
+    }
+  }
+}
+.btn-icon {
+  padding: 0.25em 0.5em;
+}
+.btn-light-dark {
+  background: rgba($dark, 0.1);
+  color: $white;
+  &:hover {
+    color: $white;
+    background: $dark;
+  }
+}
+.row {
+  @include media-breakpoint-down(md) {
+    margin-right: rem(-5px);
+    margin-left: rem(-5px);
+    > * {
+      padding-right: rem(5px);
+      padding-left: rem(5px);
+    }
+  }
+}
+
+.swiper-slide {
+  height: auto;
+}
+.autoWidthSwiper {
+  .swiper-slide {
+    width: auto;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @include rfs(40px, width);
+  @include rfs(40px, height);
+  margin-top: 0;
+  transform: translateY(-50%);
+  border-radius: 20rem;
+  color: $primary;
+  background: $white;
+  box-shadow: 0px 4px 8px 0px rgb(0 0 0 / 20%);
+  display: none;
+  &:after {
+    @include font-size(18px);
+  }
+}
+
+.swiper {
+  &:hover {
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: flex;
+    }
+  }
+}
+
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  cursor: pointer !important;
+  pointer-events: auto !important;
+}
+.swiper-pagination-bullet {
+  background: $white;
+}
+
+// body dp-date-picker.dp-material {
+//   display: block;
+//   width: 100%;
+//   .dp-picker-input {
+//     @extend .form-control;
+//     width: 100% !important;
+//   }
+//   .dp-selected {
+//     background: $primary;
+//     border-color: $primary;
+//     &:hover {
+//       background: $secondary;
+//     }
+//   }
+//   .dp-current-day {
+//     border-color: $primary;
+//   }
+//   .dp-calendar-wrapper {
+//     border: 0;
+//   }
+//   .dp-popup {
+//     border: 0;
+//     box-shadow: $box-shadow;
+//   }
+//   .dp-calendar-nav-container {
+//     border: 0;
+//   }
+//   .dp-weekdays {
+//     font-size: 1rem;
+//   }
+//   .dp-current-month {
+//     border-color: $primary;
+//   }
+//   .dp-calendar-weekday {
+//     color: $dark;
+//     font-weight: $font-weight-medium;
+//   }
+// }
+
+// .form-check {
+//   font-size: rem(14px);
+// }
+.form-select-light,
+.form-control-light {
+  background-color: $gray-300;
+}
+
+.input-group {
+  border-radius: $input-border-radius;
+  border: $input-border-width solid $input-border-color;
+  margin: 0;
+  > * {
+    border: 0 !important;
+  }
+}
+
+body {
+  .iti {
+    width: 100%;
+  }
+  .iti__country-list {
+    @include scrollBar;
+  }
+  .iti__country-list {
+    border-color: $input-border-color;
+    box-shadow: none;
+  }
+  .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
+    background: rgba($input-border-color, 0.2);
+  }
+}
+
+.form-control-number {
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+body {
+  .ngx-slider .ngx-slider-pointer {
+    background-color: $secondary !important;
+    outline: 0;
+    width: rem(20px) !important;
+    height: rem(20px) !important;
+    top: -9px !important;
+  }
+
+  .ngx-slider .ngx-slider-pointer:after {
+    background: $white !important;
+    display: none;
+  }
+  .ngx-slider .ngx-slider-bar {
+    background: rgba($secondary, 0.1) !important;
+  }
+  .ngx-slider .ngx-slider-bubble.ngx-slider-limit,
+  .ngx-slider .ngx-slider-bubble {
+    color: $secondary !important;
+  }
+  .ngx-slider .ngx-slider-selection {
+    background: $secondary !important;
+  }
+}
+
+body .cards-wide {
+  .col-6 {
+    width: 100%;
+  }
+  .col-xl-3 {
+    @include media-breakpoint-up(lg) {
+      width: 50%;
+    }
+  }
+  .appCard {
+    display: flex;
+    align-items: center;
+    &-header {
+      width: rem(200px);
+      @include media-breakpoint-down(sm) {
+        width: rem(140px);
+        height: 100%;
+        &-thumb {
+          height: 100%;
+          .appImage {
+            padding-top: 0;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,246 @@
+<section class="pt-xs  ">
+  <div class="container">
+    <swiper [config]="swiperFullConfig">
+      <ng-template swiperSlide *ngFor="let item of [].constructor(3) ; let i = 'index+1'">
+        <a [routerLink]="['/']" title="abc">
+          <app-image src="assets/images/b/1.png" ratio="is-4-1 rounded"></app-image>
+        </a>
+      </ng-template>
+    </swiper>
+  </div>
+</section>
+
+
+
+<section class="pt-md pb-md  ">
+  <div class="container">
+    <swiper [config]="categoriesSwiperConfig">
+      <ng-template swiperSlide>
+        <a [routerLink]="['/']" class="d-block text-center" title="Hot Deals ">
+          <div class="categoryCircleIcon">
+            <img [src]="'assets/images/categories/1.svg'" alt="Hot Deals">
+          </div>
+          <h4 class="fs-xs mb-0 mt-xxs text-danger">Hot Deals</h4>
+        </a>
+      </ng-template>
+      <ng-template swiperSlide *ngFor="let item of [].constructor(8) ; let i = 'index+1'">
+        <a [routerLink]="['/']" class="d-block text-center" title="Car Seats ">
+          <div class="categoryCircleIcon">
+            <img [src]="'assets/images/categories/'+ i +'.svg'" alt="Car Seats">
+          </div>
+          <h4 class="fs-xs mb-0 mt-xxs">Car Seats</h4>
+        </a>
+      </ng-template>
+      <ng-template swiperSlide *ngFor="let item of [].constructor(8) ; let i = 'index+1'">
+        <a [routerLink]="['/']" class="d-block text-center" title="Car Seats ">
+          <div class="categoryCircleIcon">
+            <img [src]="'assets/images/categories/'+ i +'.svg'" alt="Car Seats">
+          </div>
+          <h4 class="fs-xs mb-0 mt-xxs">Car Seats</h4>
+        </a>
+      </ng-template>
+    </swiper>
+
+  </div>
+</section>
+
+
+<section class="pt-lg pb-lg  bg-gray-300">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+      <h3 class="fs-xl mb-xs">Hot Deals</h3>
+      <a class="btn  btn-outline-dark mb-xs " [routerLink]="['/']" title="View More">
+        View More
+      </a>
+    </div>
+    <swiper [config]="productsSwiperConfig">
+      <ng-template swiperSlide *ngFor="let item of [].constructor(10) ; let i = 'index+1'">
+        <product-card></product-card>
+      </ng-template>
+    </swiper>
+  </div>
+</section>
+
+<section class="pt-lg scrollSection">
+  <div class="scrollSection-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <a [routerLink]="['/']" title="abc">
+            <app-image src="assets/images/b/4.png" ratio="is-4-1 rounded"></app-image>
+          </a>
+        </div>
+        <div class="col-6">
+          <a [routerLink]="['/']" title="abc">
+            <app-image src="assets/images/b/5.png" ratio="is-4-1 rounded"></app-image>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pt-lg">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+      <h3 class="fs-xl mb-xs">Featured Categories</h3>
+      <a class="btn  btn-outline-dark mb-xs " [routerLink]="['/']" title="View More">
+        View More
+      </a>
+    </div>
+    <div class="scrollSection">
+      <div class="scrollSection-container">
+        <div class="row ">
+          <div class="col mb-col" *ngFor="let category of dummyCategories ; let i = 'index+1'">
+            <a [routerLink]="['/']"
+              class="categoryWide bg-gray-300 rounded-3 p-xs d-flex align-items-center  h-100 justify-content-center">
+              <div class="categoryWide-icon">
+                <img [src]="category.icon" [alt]="category.title">
+              </div>
+              <span class="fw-bold ms-e3 fs-xs text-nowrap">{{category.title}}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pt-lg ">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+      <h3 class="fs-xl mb-xs">Popular Deals For You</h3>
+      <a class="btn  btn-outline-dark mb-xs " [routerLink]="['/']" title="View More">
+        View More
+      </a>
+    </div>
+    <swiper [config]="productsSwiperConfig">
+      <ng-template swiperSlide *ngFor="let item of [].constructor(10) ; let i = 'index+1'">
+        <product-card></product-card>
+      </ng-template>
+    </swiper>
+
+  </div>
+</section>
+
+
+<section class="pt-lg  scrollSection">
+  <div class="scrollSection-container">
+    <div class="container ">
+      <div class="row">
+        <div class="col-4">
+          <a [routerLink]="['/']" title="abc">
+            <app-image src="assets/images/b/6.png" ratio="is-5-3 rounded"></app-image>
+          </a>
+        </div>
+        <div class="col-4">
+          <a [routerLink]="['/']" title="abc">
+            <app-image src="assets/images/b/7.png" ratio="is-5-3 rounded"></app-image>
+          </a>
+        </div>
+        <div class="col-4">
+          <a [routerLink]="['/']" title="abc">
+            <app-image src="assets/images/b/8.png" ratio="is-5-3 rounded"></app-image>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pt-lg ">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+      <h3 class="fs-xl mb-xs">Shop All Mumez</h3>
+      <a class="btn  btn-outline-dark mb-xs " [routerLink]="['/']" title="View More">
+        View More
+      </a>
+    </div>
+    <swiper [config]="productsSwiperConfig">
+      <ng-template swiperSlide *ngFor="let item of [].constructor(10) ; let i = 'index+1'">
+        <product-card></product-card>
+      </ng-template>
+    </swiper>
+
+  </div>
+</section>
+
+<section class="pt-lg pb-lg mt-lg  bg-gray-300">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+      <h3 class="fs-xl mb-xs">Featured Products </h3>
+      <a class="btn  btn-outline-dark mb-xs " [routerLink]="['/']" title="View More">
+        View More
+      </a>
+    </div>
+    <swiper [config]="productsSwiperConfig">
+      <ng-template swiperSlide *ngFor="let item of [].constructor(10) ; let i = 'index+1'">
+        <product-card></product-card>
+      </ng-template>
+    </swiper>
+  </div>
+</section>
+
+
+<section class="pt-lg ">
+  <div class="container">
+    <div class="text-center">
+      <h3 class="fs-xl mb-xs">Shop by age </h3>
+    </div>
+    <div class="scrollSection">
+      <div class="scrollSection-container">
+
+        <div class="row">
+          <div class="col-3" *ngFor="let item of [].constructor(4) ; let i = 'index+1'">
+            <app-age-card></app-age-card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="pt-lg ">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+      <h3 class="fs-xl mb-xs">Top Toy Picks</h3>
+      <a class="btn  btn-outline-dark mb-xs " [routerLink]="['/']" title="View More">
+        View More
+      </a>
+    </div>
+    <swiper [config]="productsSwiperConfig">
+      <ng-template swiperSlide *ngFor="let item of [].constructor(10) ; let i = 'index+1'">
+        <product-card></product-card>
+      </ng-template>
+    </swiper>
+
+  </div>
+</section>
+
+
+
+<section class="pt-lg ">
+  <div class="container">
+    <div class="text-center">
+      <h3 class="fs-xl mb-xs">Widest Range 1,600 Brands </h3>
+    </div>
+    <div class="scrollSection">
+      <div class="scrollSection-container">
+        <div class="row g-2  justify-content-center">
+          <div class="col  appLogo-col" *ngFor="let item of [].constructor(21) ; let i = 'index+1'">
+            <a [routerLink]="['/']" class="bg-gray-300 rounded-3 p-xs d-flex align-items-center justify-contnet-center">
+              <div class="appLogo ">
+                <img [src]="'assets/images/logos/'+ i +'.png'" alt="">
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="mt-lg">
+  <app-features></app-features>
+</div>

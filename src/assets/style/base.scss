@@ -1,0 +1,32 @@
+body {
+  @include font-size(16px);
+}
+svg-icon {
+  display: inline-block;
+  line-height: 0;
+  overflow: hidden;
+  vertical-align: middle;
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: inherit;
+    font-size: 1em;
+    width: 1em;
+    height: auto;
+    line-height: 1;
+  }
+  &.is {
+    &-xxxl {
+      font-size: 2.5em;
+    }
+    &-xl {
+      font-size: 1.75em;
+    }
+    &-lg {
+      font-size: 1.5em;
+    }
+    &-md {
+      font-size: 1.25em;
+    }
+  }
+}

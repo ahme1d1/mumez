@@ -1,0 +1,57 @@
+<section class=" pt-md pb-lg">
+  <div class="container">
+    <div class="row gx-lg">
+      <div class="col-xl-3 col-lg-4"></div>
+      <div class="col-xl-9 col-lg-8">
+
+        <ul class="appBreadcrumbs">
+          <li>
+            <a [routerLink]="['/']" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }"
+              title="Home">Home
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/category']" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }"
+              title="Diapers">Diapers
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/sub-category']" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }"
+              title="Stroller">Stroller
+            </a>
+          </li>
+        </ul>
+        <div class="pt-xs">
+          <h3 class="fs-lg mb-xxs">All Products </h3>
+          <div class="d-flex justify-content-between mb-xs align-items-center">
+            <span class="opacity-50 fs-xxxs">Total: 45 items</span>
+            <div class="d-flex align-items-center">
+              <span class="fw-normal me-e4  text-nowrap">Sort by </span>
+              <select class="form-select">
+                <option [value]="item" *ngFor="let item of dummySort ; let i = 'index+1'">{{item}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-xl-3 col-lg-4">
+        <app-filter></app-filter>
+      </div>
+      <div class="col-xl-9 col-lg-8">
+        <div class="row">
+          <div class="col-xl-3 col-md-4 col-6 mb-col" *ngFor="let item of [].constructor(12) ; let i = 'index+1'">
+            <product-card></product-card>
+          </div>
+        </div>
+        <div class="text-center mt-xs">
+          <p class="mb-3 moreText max-md mx-auto">
+            <span>40 out of 142 Products</span>
+          </p>
+          <button class="btn btn-outline-primary px-4 pt-e2 pb-e2 fs-xs "> Load More Products</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,88 @@
+<section class="pt-md ">
+  <div class="container">
+    <div class="max-xl mx-auto">
+      <div class="mb-xs">
+        <ul class="appBreadcrumbs">
+          <li>
+            <a [routerLink]="['/']" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }"
+              title="Home">Home
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/blog']" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }"
+              title="Blog">Blog
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/blog/single']" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }"
+              title="Try These 5 Tips Tonight To Improve Your Child’s Sleep">Try These 5 Tips Tonight To Improve Your
+              Child’s Sleep
+            </a>
+          </li>
+        </ul>
+      </div>
+      <h1 class="fs-xl max-xl mb-xs">
+        Try These 5 Tips Tonight To Improve Your Child’s Sleep
+      </h1>
+    </div>
+    <div class="mb-xs">
+      <app-image ratio="is-5-2 rounded"></app-image>
+    </div>
+    <div class="max-xl mx-auto">
+      <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking
+        at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+        opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing
+        packages.</p>
+      <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking
+        at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+        opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing
+        packages.</p>
+      <h5>Sleep Shortcut #1: Watch the Waking Hours
+      </h5>
+      <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking
+        at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+        opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing
+        packages.</p>
+      <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking
+        at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+        opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing
+        packages.</p>
+      <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking
+        at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+        opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing
+        packages.</p>
+      <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking
+        at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+        opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing
+        packages.</p>
+      <h5>Sleep Shortcut #1: Watch the Waking Hours
+      </h5>
+      <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking
+        at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+        opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing
+        packages.</p>
+
+      <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking
+        at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+        opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing
+        packages.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="pt-lg pb-lg ">
+  <div class="container">
+    <h4 class="fs-xl text-center mb-0">Related Posts</h4>
+    <div class="row">
+      <div class="col-md-6 mt-sm" *ngFor="let item of [].constructor(2) ; let i = 'index+1'">
+        <a class="d-block" [routerLink]="['/blog/single']"
+          title="Overwhelmed by Nursery and School Choices? Here’s What to Consider">
+          <app-image ratio="is-5-2 rounded"></app-image>
+          <p class="text-muted mb-2 mt-xs">02 MAR 2020</p>
+          <h4 class="fs-sm mb-0 max-lg">Overwhelmed by Nursery and School Choices? Here’s What to Consider</h4>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

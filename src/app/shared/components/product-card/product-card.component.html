@@ -1,0 +1,54 @@
+<div class="productCard">
+  <div class="productCard-header">
+    <a [routerLink]="['/product']" class="productCard-header-thumb"
+      title="Pampers Pants Size 5, Set of 2, 12-18 KG - 104 Diapers">
+      <app-image alt="Pampers Pants Size 5, Set of 2, 12-18 KG - 104 Diapers" ratio="is-4-5"></app-image>
+    </a>
+    <ul class="productCard-header-actions">
+      <li>
+        <span [ngClass]="{'is-active': fav}" (click)="fav = !fav">
+          <ng-container *ngIf="fav; else favTemplate">
+            <svg-icon src="assets/icons/heart-fill.svg"></svg-icon>
+          </ng-container>
+          <ng-template #favTemplate>
+            <svg-icon src="assets/icons/heart.svg"></svg-icon>
+          </ng-template>
+        </span>
+      </li>
+
+      <li>
+        <span [ngClass]="{'is-active': cart}" (click)="cart = !cart">
+          <ng-container *ngIf="cart; else cartTemplate">
+            <svg-icon src="assets/icons/cart-minus.svg"></svg-icon>
+          </ng-container>
+          <ng-template #cartTemplate>
+            <svg-icon src="assets/icons/cart-plus.svg"></svg-icon>
+          </ng-template>
+        </span>
+      </li>
+    </ul>
+    <div class="productCard-header-badge">Free shipping</div>
+
+  </div>
+  <div class="productCard-body">
+    <h4 class="productCard-title">
+      <a [routerLink]="['/product']">
+        Pampers Pants Size 5, Set of 2, 12-18 KG - 104 Diapers
+      </a>
+    </h4>
+    <div class=" d-flex justify-content-between align-items-center">
+      <p class="productCard-price mb-0">
+        <span class="productCard-price-current me-xxs">4500 EGP </span>
+        <span class="productCard-price-old me-xxs">4800 EGP</span>
+        <span class="productCard-price-discount ">8% Off</span>
+      </p>
+
+      <!-- <span class="productCard-rate">
+        <svg-icon src="assets/icons/star.svg" class="me-xxs"></svg-icon>
+        <span>4.5 <span class="productCard-rate-num">(15)</span></span>
+      </span> -->
+    </div>
+
+  </div>
+
+</div>

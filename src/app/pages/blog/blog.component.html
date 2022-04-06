@@ -1,0 +1,81 @@
+<section class="pt-md ">
+  <div class="container">
+    <div class="mb-xs">
+      <ul class="appBreadcrumbs">
+        <li>
+          <a [routerLink]="['/']" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }"
+            title="Home">Home
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/blog']" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }"
+            title="Blog">Blog
+          </a>
+        </li>
+      </ul>
+    </div>
+    <h1 class="fs-xl">
+      Mumez Blog
+    </h1>
+
+
+  </div>
+</section>
+
+<section class="pt-xs">
+  <div class="container">
+    <swiper [config]="swiperAutoConfig" class="autoWidthSwiper">
+      <ng-template swiperSlide>
+        <a [routerLink]="['/blog']"
+          class=" bg-light-primary is-active rounded-3 p-xs ps-sm pe-sm d-inline-flex align-items-center  h-100 justify-content-center">
+          <span class="fw-bold fs-xs text-nowrap">All</span>
+        </a>
+      </ng-template>
+      <ng-template swiperSlide *ngFor="let category of dummyCategories ; let i = 'index+1'">
+        <a [routerLink]="['/blog']"
+          class=" bg-light-primary rounded-3 p-xs ps-sm pe-sm d-inline-flex align-items-center  h-100 justify-content-center">
+          <span class="fw-bold fs-xs text-nowrap">{{category.title}}</span>
+        </a>
+      </ng-template>
+    </swiper>
+  </div>
+</section>
+
+
+
+<section class="pt-md pb-lg">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-md-6 ">
+        <a class="d-block" [routerLink]="['/blog/single']"
+          title="Overwhelmed by Nursery and School Choices? Here’s What to Consider">
+          <app-image ratio="is-3-2 rounded"></app-image>
+          <p class="text-muted mb-2 mt-xs">02 MAR 2020</p>
+          <h4 class="fs-md mb-0 max-lg">Overwhelmed by Nursery and School Choices? Here’s What to Consider</h4>
+        </a>
+      </div>
+      <div class="col-md-6 ">
+        <a class="d-block" [routerLink]="['/blog/single']"
+          title="Overwhelmed by Nursery and School Choices? Here’s What to Consider">
+          <app-image ratio="is-3-2 rounded"></app-image>
+          <p class="text-muted mb-2 mt-xs">02 MAR 2020</p>
+          <h4 class="fs-md mb-0 max-lg">Overwhelmed by Nursery and School Choices? Here’s What to Consider</h4>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-4 " *ngFor="let item of [].constructor(12) ; let i = 'index+1'">
+        <a class="d-block" [routerLink]="['/blog/single']"
+          title="Overwhelmed by Nursery and School Choices? Here’s What to Consider">
+          <app-image ratio="is-3-2 rounded"></app-image>
+          <p class="text-muted mb-2 mt-xs">02 MAR 2020</p>
+          <h4 class="fs-sm mb-0 max-lg">Overwhelmed by Nursery and School Choices? Here’s What to Consider</h4>
+        </a>
+      </div>
+    </div>
+    <div class="text-center mt-xs">
+      <p class="mb-3 moreText max-md mx-auto">
+        <span>40 out of 142 Posts</span>
+      </p>
+      <button class="btn btn-outline-primary px-4 pt-e3 pb-e3 fs-xs "> Load More Posts</button>
+    </div>
+  </div>
+</section>

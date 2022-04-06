@@ -1,0 +1,91 @@
+<div>
+  <div class="text-center">
+    <h1 class="fs-lg mb-sm">Shipping Informations</h1>
+
+  </div>
+
+  <div class="border  border-g-400 rounded">
+    <div class=" p-xs w-100  addressItem d-flex justify-content-between align-items-center">
+      <label class="w-100 cursor d-block">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="address" value="" checked>
+          <span class="form-check-label">
+            <span class="fw-semi">Main Address</span>
+            <br>
+            Eslam Hamed
+            <br>
+            <span class="max-sm d-block fs-xxxs">
+              المركزية, CMQG+9W - New Damietta - Damietta Governorate,Dumiatta, Egypt
+            </span>
+          </span>
+        </div>
+      </label>
+      <div class="addressItem-actions">
+        <button
+          class="btn text-primary fw-semi p-0  fs-xxxs d-inline-flex align-items-center  justify-content-center shadow-none">
+          <svg-icon src='assets/icons/edit.svg' class="is-lg "></svg-icon>
+          <span class="ms-e5">Edit</span>
+        </button>
+      </div>
+    </div>
+    <hr class="bg-gray opacity-100 m-0">
+    <div class=" p-xs w-100  addressItem d-flex justify-content-between align-items-center">
+      <label class="w-100  cursor d-block">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="address" value="">
+          <span class="form-check-label">
+            <span class="fw-semi">Main Address</span>
+            <br>
+            Eslam Hamed
+            <br>
+            <span class="max-sm d-block fs-xxxs">
+              المركزية, CMQG+9W - New Damietta - Damietta Governorate,Dumiatta, Egypt
+            </span>
+          </span>
+        </div>
+      </label>
+      <div class="addressItem-actions">
+        <button
+          class="btn text-primary fw-semi p-0  fs-xxxs d-inline-flex align-items-center  justify-content-center shadow-none">
+          <svg-icon src='assets/icons/edit.svg' class="is-lg "></svg-icon>
+          <span class="ms-e5">Edit</span>
+        </button>
+
+      </div>
+    </div>
+    <hr class="bg-gray opacity-100 m-0">
+    <div class=" p-xs w-100  addressItem d-flex justify-content-between align-items-center">
+      <label class="w-100  cursor d-block">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="address" value="">
+          <span class="form-check-label">
+            <span class="fw-semi">Main Address</span>
+            <br>
+            Eslam Hamed
+            <br>
+            <span class="max-sm d-block fs-xxxs"> المركزية, CMQG+9W - New Damietta - Damietta Governorate,Dumiatta,
+              Egypt
+            </span>
+          </span>
+        </div>
+      </label>
+      <div class="addressItem-actions">
+        <button
+          class="btn text-primary fw-semi p-0  fs-xxxs d-inline-flex align-items-center  justify-content-center shadow-none">
+          <svg-icon src='assets/icons/edit.svg' class="is-lg "></svg-icon>
+          <span class="ms-e5">Edit</span>
+        </button>
+
+      </div>
+    </div>
+    <hr class="bg-gray opacity-100 m-0">
+
+    <button class="btn py-3  align-items-center w-100 d-flex justify-content-center " (click)="show = true">
+      <svg-icon src='assets/icons/plus-circle.svg' class="is-lg me-e4"></svg-icon>
+      <span>Add New Address</span>
+    </button>
+  </div>
+</div>
+
+
+<address-modal [show]="show" (hideModal)="show=$event"></address-modal>

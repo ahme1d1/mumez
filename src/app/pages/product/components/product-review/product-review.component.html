@@ -1,0 +1,15 @@
+<div class="review">
+  <div class="review-header">
+    <div class="appImage is-1-1">
+      <app-image [src]="image" [alt]="name" ratio="is-1-1"></app-image>
+    </div>
+  </div>
+  <div class="review-body ms-e1">
+    <div class="d-flex align-items-center mb-e4 ">
+      <h4 class="mb-0 me-xs mt-e6 fw-semi"> {{name}}</h4>
+      <app-star-rate rate="{{rate}}"></app-star-rate>
+    </div>
+    <span class="review-body-content">{{description}}</span>
+  </div>
+
+</div>

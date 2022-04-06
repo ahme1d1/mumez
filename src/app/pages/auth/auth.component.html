@@ -1,0 +1,20 @@
+<div class="authPage">
+  <div class="authPage-col">
+    <div class="authPage-content">
+      <a class="authPage-logo" [routerLink]="['/']">
+        <img src="assets/icons/logo-white.svg" alt="Mumez">
+      </a>
+      <p class="fs-xxl authPage-desc ms-lg mb-0 mt-xs">Welcome to the mummy Mumez world. </p>
+    </div>
+
+    <div class="authPage-img">
+      <img src="assets/icons/auth.svg" alt="Mumez">
+    </div>
+  </div>
+  <div class="authPage-col">
+    <div class="authPage-form w-100 max-md">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+</div>

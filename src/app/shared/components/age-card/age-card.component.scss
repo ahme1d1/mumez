@@ -1,0 +1,26 @@
+@import "src/assets/style/global";
+
+.ageCard {
+  display: block;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  border-radius: $border-radius-lg $border-radius-lg 2em 2em;
+  overflow: hidden;
+  position: relative;
+  &-title {
+    position: absolute;
+    bottom: 1em;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 3;
+  }
+  &-bg {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+  }
+}
